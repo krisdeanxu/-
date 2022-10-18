@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <style>
+      body{
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .yinYing{
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0/ 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .flex{
+        display:flex;
+      }
+      .baiSe{
+          background-color: white;
+      }
+      .flex1{
+        flex:1 ;
+      }
+      .column{
+          flex-direction: column;
+      }
+      .mg8{
+        margin: 8px;
+      }
+      .mgr8{
+        margin-right: 8px;
+      }
+      .mgt8{
+        margin-top: 8px;
+      }
+      .caiDan{
+        padding: 10px 20px;
+        border-bottom: 1px solid red;
+        font-size: 14px;
+        color: blue;
+
+      }
+
+      @media (max-width: 600px){
+          .ceBian {
+              display: none;
+          }
+          .neiRong{
+              flex-direction: column;
+          }
+          .shuJuqu{
+              flex-direction: column;
+          }
+          .youQu{
+              margin-left: 8px;
+          }
+          .Shuju{
+              margin: 0 0 8px;
+              flex: auto;
+          }
+      }
+
+    </style>
+  </head>
+
+ <body class="flex">
+     <!--侧边烂-->
+     <div style="width: 200px;z-index:2;" class="ceBian baiSe yinYing">
+       <!--餐厅照片-->
+       <div style="padding: 10px;
+       align-items: center;
+       justify-content: center;
+       border-bottom: 1px solid #999"
+            class="flex">
+         <img src="rest.png"
+              width="40px"
+              height="40px"
+              alt="蓬莱仙阁">
+              <div style="margin-left: 20px">蓬莱仙阁</div>
+       </div>
+       <!--餐厅菜单-->
+       <div class="flex1">
+         <div class="caiDan">菜单</div>
+         <div class="caiDan">菜单</div>
+         <div class="caiDan">菜单</div>
+         <div class="caiDan">菜单</div>
+         <div class="caiDan">菜单</div>
+       </div>
+     </div>
+     <!--主区域-->
+     <div class="flex1 flex column">
+       <!--头部栏-->
+       <div style="height:120px;z-index:1;"  class="baiSe yinYing"></div>
+       <!--内容区-->
+       <div style="overflow: auto" class="neiRong flex1 flex">
+            <!--左区-->
+            <div style="flex:3" class="flex column mg8">
+              <!--数据区-->
+              <div class="flex shuJuqu">
+                <!--数据块-->
+                <div style="height: 100px" class="Shuju flex1 baiSe mgr8 yinYing"></div>
+                <div style="height: 100px" class="Shuju flex1 baiSe mgr8 yinYing"></div>
+                <div style="height: 100px" class="Shuju flex1 baiSe mgr8 yinYing"></div>
+                <div style="height: 100px" class="Shuju flex1 baiSe mgr8 yinYing"></div>
+              </div>
+              <!--列表区-->
+              <div class="flex column">
+                <!--列表项-->
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+                <div style="height: 200px" class="baiSe mgt8 yinYing"></div>
+              </div>
+            </div>
+            <!--右区-->
+            <div style="flex:1" class="flex column mgr8 mgt8 youQu">
+              <!--提示区-->
+              <div style="height: 250px" class="baiSe yinYing"></div>
+              <!--消息区-->
+              <div style="height: 400px" class="baiSe mgt8 yinYing"></div>
+            </div>
+       </div>
+     </div>
+
+
+ </body>
+ </html>
